@@ -55,6 +55,11 @@ if (room == rm_user_create and can_press == true){
 				if(input_[i].Text == ""){
 					scr_alert_add(1)
 				}
+				try{
+					int64(input_[i].Text)
+				}catch(e){
+					show_debug_message(e)
+				}
 			}
 
 		}
