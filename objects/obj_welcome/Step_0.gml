@@ -54,11 +54,14 @@ if (room == rm_user_create and can_press == true){
 			if(input_[i].id_input == "rut"){
 				if(input_[i].Text == ""){
 					scr_alert_add(1)
-				}
-				try{
-					int64(input_[i].Text)
-				}catch(e){
-					show_debug_message(e)
+				}else{
+					try{
+						var rut_int = int64(input_[i].Text)
+					}catch(e){
+						scr_alert_add(2)
+						show_debug_message(e)
+					//show_debug_message(rut_int)
+					}
 				}
 			}
 
