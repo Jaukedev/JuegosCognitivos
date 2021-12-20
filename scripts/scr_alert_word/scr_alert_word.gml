@@ -9,4 +9,5 @@ function scr_alert_word(){
 	msg[5] = "Las contrasenas no coinciden"
 	msg[6] = "Ingreso correcto"
 	msg[7] = "Rut o contrasena incorrecta"
+	
 }
