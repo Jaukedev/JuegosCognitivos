@@ -67,6 +67,8 @@ if (room == rm_user_create and can_press == true){
 			if(input_[i].id_input == "Fecha de Nacimiento"){
 				if(input_[i].Text == ""){
 					scr_alert_add(8)
+				}else if (!check_fecha_de_nacimiento(input_[i].Text)){
+					scr_alert_add(9)
 				}
 			}
 

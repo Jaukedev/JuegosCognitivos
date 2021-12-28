@@ -161,6 +161,7 @@
     {"id":{"name":"LICENSE","path":"scripts/LICENSE/LICENSE.yy",},"order":0,},
     {"id":{"name":"btn_nivel_1","path":"sprites/btn_nivel_1/btn_nivel_1.yy",},"order":8,},
     {"id":{"name":"inputbox_get_text","path":"scripts/inputbox_get_text/inputbox_get_text.yy",},"order":3,},
+    {"id":{"name":"Scr_check_data","path":"scripts/Scr_check_data/Scr_check_data.yy",},"order":12,},
     {"id":{"name":"sound_mute","path":"sprites/sound_mute/sound_mute.yy",},"order":18,},
     {"id":{"name":"music","path":"sounds/music/music.yy",},"order":1,},
     {"id":{"name":"rm_table_simon","path":"rooms/rm_table_simon/rm_table_simon.yy",},"order":3,},
