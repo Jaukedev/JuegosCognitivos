@@ -64,6 +64,11 @@ if (room == rm_user_create and can_press == true){
 					}
 				}
 			}
+			if(input_[i].id_input == "Fecha de Nacimiento"){
+				if(input_[i].Text == ""){
+					scr_alert_add(8)
+				}
+			}
 
 		}
 		if(pass == pass2){
