@@ -1,7 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 if (create_user_req == ds_map_find_value(async_load, "id")){
+	show_debug_message("estoy en el evento asincronico")
+	show_debug_message(string(ds_map_find_value(async_load, "status")))
+	show_debug_message(string(ds_map_find_value(async_load, "result")))
+	show_debug_message(string(ds_map_find_value(async_load, "id")))
 	if (ds_map_find_value(async_load, "status") == 0)   {
+		show_debug_message("Error de guardado 2");
 		r_str = json_decode(ds_map_find_value(async_load, "result"));
 		if (r_str == -1){
 			show_debug_message("Error de guardado");
@@ -15,7 +20,12 @@ if (create_user_req == ds_map_find_value(async_load, "id")){
 			ds_map_add(msg, "key", global.msg[? "rut"]);
 			var map = ds_map_create();
 			ds_map_add(map, "Content-Type", "application/json");
+			ds_map_add(map,"Access-Control-Allow-Origin","*")
+			show_debug_message(map)
+			show_debug_message(msg)
+			
 			param_getter_id = http_request(url, "POST", map, json_encode(msg));
+			
 			ds_map_destroy(map);
 			ds_map_destroy(msg);
 		}
