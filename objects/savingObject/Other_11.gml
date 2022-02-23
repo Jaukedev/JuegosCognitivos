@@ -17,29 +17,31 @@ if (instance_exists(textInput)){
 	{
 		input_[i] = instance_find(textInput,i);
 		if (input_[i].id_input != "user"){
+			
 			ds_map_add(global.msg, input_[i].id_input, input_[i].Text);
-			if (input_[i].Text == ""){
+			if (input_[i].Text == "" ){
 				bandera_send_request = false
-				scr_alert_add(1)
+				scr_alert_add(10)
 			}else {
 				bandera_send_request = true
 			}
 		}
 		else {
-			var t_str = string_digits(input_[i].Text);
-			ds_map_add(global.msg, input_[i].id_input, t_str);
-			if (input_[i].Text == ""){
+			show_debug_message(string_length(input_[i].Text))
+			var largo = string_length(input_[i].Text)
+			if (largo < 7 || largo > 8){
 				bandera_send_request = false
-				scr_alert_add(10)
+				scr_alert_add(1)
 			}else{
 				bandera_send_request = true
+				var t_str = string_digits(input_[i].Text);
+				ds_map_add(global.msg, input_[i].id_input, t_str);
 			}
 		}
 		
 	}
 	
 	show_debug_message(json_encode(global.msg))
-	
 	if (bandera_send_request == true){
 		login_user_req = http_request(url, "POST", map, json_encode(global.msg));
 	
