@@ -89,6 +89,12 @@ show_debug_message("Sequence instances: " + string(inst_sequence));
 
 // The amound of pairs that must be found in order to win
 // and the stored progress, how many pairs found so far
+//response tme
+tiempo_respuesta = 0;
+tiempo_pivote = 0;
+tiempo_delta = 0
+global.gameTitle = "Seguir la secuencia";
+
 ac_sequence = 1;
 max_sequence = number_of_tiles;
 ac_recording = 0;

@@ -1,5 +1,7 @@
 /// @description Inserte aquí la descripción
 // Puede escribir su código en este editor
+tiempo_delta = (delta_time/1000) + tiempo_delta
+
 if (recording and ac_recording == ac_sequence){
 	if ac_sequence < number {
 		recording = false;

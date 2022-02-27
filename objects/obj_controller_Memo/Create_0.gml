@@ -76,6 +76,13 @@ for(i = 0; i < number_of_tiles; i++)
 total_matches = number_of_tiles / 2;
 matches_found = 0;
 
+/////variables tiempo de reaccion 
+tiempo_respuesta = 0;
+tiempo_pivote = 0;
+tiempo_delta = 0 
+
+
+global.gameTitle = "Encontrar la pareja";
 
 // Control of player's flipping pace
 can_flip = true;

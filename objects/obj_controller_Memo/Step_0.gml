@@ -1,5 +1,6 @@
 /// @description User input & win conditions
 
+tiempo_delta = (delta_time/1000) + tiempo_delta
 //user input
 
 if(keyboard_check_pressed(vk_escape)) game_restart();

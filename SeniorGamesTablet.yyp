@@ -38,6 +38,7 @@
     {"id":{"name":"obj_btn_create","path":"objects/obj_btn_create/obj_btn_create.yy",},"order":7,},
     {"id":{"name":"inputbox_get_x","path":"scripts/inputbox_get_x/inputbox_get_x.yy",},"order":4,},
     {"id":{"name":"inputbox_keyboard_input","path":"scripts/inputbox_keyboard_input/inputbox_keyboard_input.yy",},"order":2,},
+    {"id":{"name":"Obj_pruebas","path":"objects/Obj_pruebas/Obj_pruebas.yy",},"order":20,},
     {"id":{"name":"objButton","path":"objects/objButton/objButton.yy",},"order":12,},
     {"id":{"name":"IniDataIni","path":"scripts/IniDataIni/IniDataIni.yy",},"order":4,},
     {"id":{"name":"sprButtonMask","path":"sprites/sprButtonMask/sprButtonMask.yy",},"order":1,},

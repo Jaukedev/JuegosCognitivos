@@ -1,5 +1,6 @@
 /// @description Initial variables
 
+
 // flip animation manipulation
 is_flipping			= false;
 is_flipping_back	= false;
@@ -14,5 +15,4 @@ image_index			= 0;
 // The sprite that will be revealed uppon flipping
 sprite_to_change	= 0;
 
- 
 

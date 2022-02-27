@@ -28,6 +28,7 @@ global.enemigosIniciales = 0;
 global.actualEntries = 0;
 global.baseJsonStructure = -1;
 global.conectado = false;
+global.gameTitle = "";
 
 // Relacionado a extras
 global.tryValueList = [];
@@ -42,3 +43,19 @@ global.userResponse = "No Response";
 global.origin = "No origin";
 global.description = "No description";
 global.livesCounter = 0;
+
+
+//Relacionados a registro de tabla juegos en db // creado el 23-02-2022
+global.rutRegistro = "";
+global.nombreRegistro = "";
+global.nivelRegistro = 0;
+global.cantidadIntentosRegistro = 0;
+global.respuestaRegistro = "";
+global.TdreaccionRegistro = 0;
+global.eventtypeRegistro = "";
+global.puntajeRegistro = 0;
+global.extraRegistro = "";
+
+global.urljuegosRegistro = "https://juegoscognitivos.cl/asdf/public_test/php/game-instances/data/juegos/save";
+
+
