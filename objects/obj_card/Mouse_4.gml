@@ -31,6 +31,7 @@ if(flipped == false and obj_controller_Memo.can_flip)
 	{
 		// record that a card is opened
 		obj_controller_Memo.flipped_tiles++;
+		global.intento ++;
 		obj_controller_Memo.tiempo_respuesta = (obj_controller_Memo.tiempo_delta - obj_controller_Memo.tiempo_pivote)
 		show_debug_message(delta_time)
 		// check if the card matches the a card that already is opened
@@ -50,6 +51,7 @@ if(flipped == false and obj_controller_Memo.can_flip)
 			global.response = "Match!";
 			global.origin = "";
 			global.description = " ";
+			global.gameTitle = "Encontrar pareja";
 			if (variable_global_exists("savingObjectInstance")) {
 			with (global.savingObjectInstance) {
 				event_user(12);
@@ -73,6 +75,7 @@ if(flipped == false and obj_controller_Memo.can_flip)
 			global.response = "Error!";
 			global.origin = " ";
 			global.description = " ";
+			global.gameTitle = "Encontrar pareja";
 			if (variable_global_exists("savingObjectInstance")) {
 			with (global.savingObjectInstance) {
 				event_user(12);

@@ -10,6 +10,7 @@ if (obj_controller_Simon.recording) {
 		}
 		if (ac_recording == (ac_sequence-1)){
 		obj_controller_Simon.tiempo_respuesta = (obj_controller_Simon.tiempo_delta - obj_controller_Simon.tiempo_pivote)
+		global.intento++;
 		}
 		show_debug_message("secuence: "+ string(sequence[ac_recording])+ ", id: "+ string(id_));
 		if (sequence[ac_recording] == id_){
@@ -25,6 +26,7 @@ if (obj_controller_Simon.recording) {
 			global.response = "Acierto!";
 			global.origin = " ";
 			global.description = " ";
+			global.gameTitle = "Seguir la secuencia";
 			////////////////////////////////////////////////////////////////
 			
 			
@@ -46,6 +48,7 @@ if (obj_controller_Simon.recording) {
 			global.response = "Error!";
 			global.origin = " ";
 			global.description = " ";
+			global.gameTitle = "Seguir la secuencia";
 			show_debug_message("seguiendo la secuencia")
 			if (variable_global_exists("savingObjectInstance")) {
 			with (global.savingObjectInstance) {

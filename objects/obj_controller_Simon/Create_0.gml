@@ -94,6 +94,7 @@ tiempo_respuesta = 0;
 tiempo_pivote = 0;
 tiempo_delta = 0
 global.gameTitle = "Seguir la secuencia";
+global.intento = 0;
 
 ac_sequence = 1;
 max_sequence = number_of_tiles;

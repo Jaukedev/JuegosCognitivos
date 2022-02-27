@@ -82,7 +82,9 @@ tiempo_pivote = 0;
 tiempo_delta = 0 
 
 
-global.gameTitle = "Encontrar la pareja";
+global.gameTitle = "Encontrar pareja";
+
+global.intento = 0;
 
 // Control of player's flipping pace
 can_flip = true;

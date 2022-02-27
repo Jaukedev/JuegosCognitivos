@@ -24,13 +24,14 @@ function appendTo(event_to_add, _usr_response, end_status) {
 	*/
 	var events_array = ds_map_create();
 	ds_map_add(events_array, "event", event_to_add);
-	ds_map_add(events_array, "round", global.experimentRound);
+	//ds_map_add(events_array, "round", global.experimentRound);
 	ds_map_add(events_array, "timeStart", global.timeStart);
 	ds_map_add(events_array, "timeEnd", global.timeEnd);
 	ds_map_add(events_array, "lives", global.livesCounter);
 	ds_map_add(events_array, "score", global.scoreCounter);
-	
-	
+	ds_map_add(events_array, "juego_actual", global.gameTitle);
+	ds_map_add(events_array, "round", global.intento);
+	ds_map_add(events_array, "origin", global.level);
 	/*
 		Ciclo de ingreso de evento de respuesta.
 		ex: representación como string de la pregunta al usuario. Editar formExercise para acomodar a las necesidades que tenga.
@@ -47,11 +48,11 @@ function appendTo(event_to_add, _usr_response, end_status) {
 		ds_map_add(events_array, "response", res);
 		ds_map_add(events_array, "userResponse", string(_usr_response));
 	
-		if (variable_global_exists("origin")) {
+		/*if (variable_global_exists("origin")) {
 			ds_map_add(events_array, "origin", global.origin);
 		} else {
 			ds_map_add(events_array, "origin", "-");
-		}
+		}*/
 		if (variable_global_exists("description")) {
 			ds_map_add(events_array, "question_type", global.description);
 		} else {
