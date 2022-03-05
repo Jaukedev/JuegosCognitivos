@@ -38,7 +38,7 @@ if (lvl_complete == 1 ){
 	
 	draw_sprite(botones,0, 372,798)
 	draw_sprite(botones,1, 832,798)
-	if global.level < 3 draw_sprite(botones,2, 1215,798)
+	//if global.level < 3 draw_sprite(botones,2, 1215,798)
 }
 if (game_over == 1 ){
 	draw_sprite_ext(fondo_menu,0,0,0,4,4,0,make_colour_rgb(240, 167, 167),0.5)

@@ -2,11 +2,12 @@
 // You can write your code in this editor
 if (create_user_req == ds_map_find_value(async_load, "id")){
 	show_debug_message("estoy en el evento asincronico")
-	show_debug_message(string(ds_map_find_value(async_load, "status")))
-	show_debug_message(string(ds_map_find_value(async_load, "result")))
-	show_debug_message(string(ds_map_find_value(async_load, "id")))
+	show_debug_message(json_decode(ds_map_find_value(async_load, "status")))
+	show_debug_message(json_decode(ds_map_find_value(async_load, "result")))
+	show_debug_message(json_decode(ds_map_find_value(async_load, "id")))
+	show_debug_message(json_encode(global.msg))
 	if (ds_map_find_value(async_load, "status") == 0)   {
-		show_debug_message("Error de guardado 2");
+		//show_debug_message("Error de guardado 2");
 		r_str = json_decode(ds_map_find_value(async_load, "result"));
 		if (r_str == -1){
 			show_debug_message("Error de guardado");
