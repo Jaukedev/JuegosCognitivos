@@ -33,6 +33,7 @@ if(flipped == false and obj_controller_Memo.can_flip)
 		obj_controller_Memo.flipped_tiles++;
 		global.intento ++;
 		obj_controller_Memo.tiempo_respuesta = (obj_controller_Memo.tiempo_delta - obj_controller_Memo.tiempo_pivote)
+		obj_controller_Memo.tiempo_delta = 0;
 		show_debug_message(delta_time)
 		// check if the card matches the a card that already is opened
 		if(obj_controller_Memo.last_tile.type == id.type) // if matches...

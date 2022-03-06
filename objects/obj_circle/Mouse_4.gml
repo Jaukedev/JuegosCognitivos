@@ -10,6 +10,7 @@ if (obj_controller_Simon.recording) {
 		}
 		if (ac_recording == (ac_sequence-1)){
 		obj_controller_Simon.tiempo_respuesta = (obj_controller_Simon.tiempo_delta - obj_controller_Simon.tiempo_pivote)
+		obj_controller_Memo.tiempo_delta = 0;
 		global.intento++;
 		}
 		show_debug_message("secuence: "+ string(sequence[ac_recording])+ ", id: "+ string(id_));
