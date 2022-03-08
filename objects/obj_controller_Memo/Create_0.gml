@@ -85,3 +85,10 @@ flipped_tiles = 0;
 last_tile = "null";
 
 
+tiempo_respuesta = 0;
+tiempo_pivote = 0;
+tiempo_delta = 0 
+bandera_puede_contar = false;
+
+global.gameTitle = "Encontrar la pareja";
+ global.intento = 0;

@@ -6,6 +6,10 @@ if (instance_exists(textInput)){
 	var map = ds_map_create();
 	ds_map_add(map, "Content-Type", "application/json");
 
+	var dia = ""
+	var mes = ""
+	var anno = ""
+
 	if (variable_global_exists("msg")){
 		ds_map_destroy(global.msg);	
 	}
@@ -17,14 +21,25 @@ if (instance_exists(textInput)){
 		input_[i] = instance_find(textInput,i);
 		if (input_[i].id_input != "rut"){
 			ds_map_add(global.msg, input_[i].id_input, input_[i].Text);
-		}
-		else {
+		}else if (input_[i].id_input != "rut"){
+
+			if(input_[i].id_input == "dia"){
+			dia = input_[i].Text
+			}else if (input_[i].id_input == "mes"){
+			mes = input_[i].Text		
+			}else if (input_[i].id_input == "año"){
+			anno = input_[i].Text
+			}
+		}else {
 			var t_str = string_digits(input_[i].Text);
 			ds_map_add(global.msg, input_[i].id_input, t_str);
 		}
 		
 		
 	}
+	
+	fecha_ = string(dia) + "/" + string(mes) + "/" +string(anno) 
+	
 	for (var i = 0; i < instance_number(Obj_menu_combobox); ++i ){
 		input_[i] = instance_find(Obj_menu_combobox,i);
 		ds_map_add(global.msg, input_[i].ID_, input_[i].text);	
@@ -36,6 +51,8 @@ if (instance_exists(textInput)){
 	//ds_map_add(global.msg, "escolaridad", "bla");
 	//ds_map_add(global.msg, "salud", "bla");
 	show_debug_message(json_encode(global.msg))
+	ds_map_add(global.msg,"borndate" , fecha_);
+	
 	create_user_req = http_request(url, "POST", map, json_encode(global.msg));
 	
 	ds_map_destroy(map);

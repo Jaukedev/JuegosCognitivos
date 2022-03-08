@@ -1,2 +1,2 @@
-id_input = "Fecha de Nacimiento";
-texto_formato = "DD/MM/AAAA"
+id_input = "dia";
+texto_formato = "DD"

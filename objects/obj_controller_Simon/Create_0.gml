@@ -106,4 +106,10 @@ show_debug_message("Sequence: " + string(sequence_));
 alarm[1] = room_speed;
 
 
+tiempo_respuesta = 0;
+tiempo_pivote = 0;
+tiempo_delta = 0
+bandera_puede_contar = false;
 
+global.gameTitle = "Seguir la secuencia";
+global.intento = 0;

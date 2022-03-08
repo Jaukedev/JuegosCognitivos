@@ -6,7 +6,8 @@ random_set_seed(date_current_datetime());
 randomize();
 global.username = "randomUser_" + string(irandom_range(0, 99));
 
-
+scr_alert_word()    // database word
+scr_alert_init()
 
 
 

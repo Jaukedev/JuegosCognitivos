@@ -8,7 +8,7 @@ if (room != rm_0 and room != rm_01 and room != rm_user_create){
 	if (variable_global_exists("savingObjectInstance")) {
 		draw_set_font(fuente_gui2)
 		draw_set_color(c_white)
-		draw_text(50, 20, string(global.username))
+		draw_text(50, 20, string(global.fullname))
 
 	}
 }

@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para más información
 function scr_alert_word(){
 	msg[0] = "Debe ingresar un nombre"
-	msg[1] = "Debe ingresar un un rut"
+	msg[1] = "Debe ingresar un rut valido"
 	msg[2] = "El rut debe ser sin puntos, sin guion ni digito verificador"
 	msg[3] = "Debe ingresar un contrasena"
 	msg[4] = "Debe repetir la contrasena"
@@ -11,4 +11,5 @@ function scr_alert_word(){
 	msg[7] = "Rut o contrasena incorrecta"
 	msg[8] = "Debe ingresar Fecha de Nacimiento"
 	msg[9] = "La fecha de nacimiento debe ser en formato DD/MM/AAAA"
+	msg[10] = "Debe Ingresar una contraseña"
 }

@@ -23,13 +23,18 @@ if(flipped == false and obj_controller_Memo.can_flip)
 		obj_controller_Memo.last_tile = id;
 		// record that a card is opened
 		obj_controller_Memo.flipped_tiles++;
+		obj_controller_Memo.bandera_puede_contar = true
+		obj_controller_Memo.tiempo_pivote = obj_controller_Memo.tiempo_delta
 	}
 	// if is already other card opened
 	else if(obj_controller_Memo.flipped_tiles == 1)
 	{
 		// record that a card is opened
 		obj_controller_Memo.flipped_tiles++;
-		
+		global.intento ++;
+		obj_controller_Memo.tiempo_respuesta = (obj_controller_Memo.tiempo_delta - obj_controller_Memo.tiempo_pivote)
+		obj_controller_Memo.tiempo_delta = 0;
+		obj_controller_Memo.bandera_puede_contar = false
 		// check if the card matches the a card that already is opened
 		if(obj_controller_Memo.last_tile.type == id.type) // if matches...
 		{
@@ -40,11 +45,11 @@ if(flipped == false and obj_controller_Memo.can_flip)
 			obj_controller_Memo.matches_found++;
 			
 			global.scoreCounter += 100;
-			global.userResponse = "Pareja formada";
-			global.exercise = "memorize";
+			global.userResponse = string(obj_controller_Memo.tiempo_respuesta);
+			global.exercise = " ";
 			global.response = "Match!";
-			global.origin = "memorize";
-			global.description = "Pareja formada exitosamente";
+			global.origin = " ";
+			global.description = " ";
 			if (variable_global_exists("savingObjectInstance")) {
 			with (global.savingObjectInstance) {
 				event_user(12);
@@ -61,12 +66,12 @@ if(flipped == false and obj_controller_Memo.can_flip)
 		{
 			obj_interfaz_Memo.errors++ ;
 			show_debug_message(obj_interfaz_Memo.errors)
-			global.scoreCounter += 100;
-			global.userResponse = "Error cometido";
-			global.exercise = "memorize";
+			global.scoreCounter -= 100;
+			global.userResponse = string(obj_controller_Memo.tiempo_respuesta);
+			global.exercise = " ";
 			global.response = "Error!";
-			global.origin = "memorize";
-			global.description = "Pareja Incorrecta";
+			global.origin = " ";
+			global.description = " ";
 			if (variable_global_exists("savingObjectInstance")) {
 			with (global.savingObjectInstance) {
 				event_user(12);

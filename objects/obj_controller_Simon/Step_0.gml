@@ -34,3 +34,6 @@ if(keyboard_check_pressed(vk_backspace)) {
 		}
 	}
 	
+if(bandera_puede_contar == true){
+	tiempo_delta = (delta_time/1000) + tiempo_delta
+}
