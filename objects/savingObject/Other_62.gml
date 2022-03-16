@@ -68,8 +68,11 @@ else if (event_saver_id == ds_map_find_value(async_load, "id")){
 else if (param_getter_id == ds_map_find_value(async_load, "id")) {
 	cargando = false;
 	show_debug_message(json_encode(async_load));
+	show_debug_message("el de arriba es el async_load")
 	if (ds_map_find_value(async_load, "status") == 0)   {
 		r_str = json_decode(ds_map_find_value(async_load, "result"));
+		show_debug_message(json_decode(ds_map_find_value(async_load, "result")));
+		show_debug_message("el de arriba es el decode")
 		if (r_str == -1)
 			show_debug_message("Error de parametros");
 		else {

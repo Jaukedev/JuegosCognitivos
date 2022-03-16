@@ -2,8 +2,6 @@
 // Puede escribir su código en este editor
 display_set_gui_size(gui_width,gui_height);
 
-
-
 //nivel
 draw_sprite(nivel_sprite,global.level-1,gui_width/2,30)
 

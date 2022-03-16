@@ -79,7 +79,7 @@ if (room == rm_memo_select ) {
 				//draw_sprite_ext(btn_nivel_3,0,gui_width/2 + 153, gui_height/2 - 80,1,1,0,c_white,0.5)
 			}
 		
-	
+			draw_text(gui_width/2 - 800, gui_height/2 + 260, "Highscore")
 		
 		}
 	}
@@ -139,6 +139,7 @@ if (room == rm_simon_select) {
 				//draw_sprite_ext(btn_nivel_3,0,gui_width/2 + 153, gui_height/2 - 80,1,1,0,c_white,0.5)
 			}
 		}
+		draw_text(gui_width/2 - 800, gui_height/2 + 260, "Highscore")
 		//draw_sprite(btn_atras,0,60, gui_height-150)
 	}
 	else {
