@@ -21,8 +21,6 @@ if (instance_exists(textInput)){
 		input_[i] = instance_find(textInput,i);
 		if (input_[i].id_input != "rut"){
 			ds_map_add(global.msg, input_[i].id_input, input_[i].Text);
-		}else if (input_[i].id_input != "rut"){
-
 			if(input_[i].id_input == "dia"){
 			dia = input_[i].Text
 			}else if (input_[i].id_input == "mes"){
@@ -30,6 +28,7 @@ if (instance_exists(textInput)){
 			}else if (input_[i].id_input == "año"){
 			anno = input_[i].Text
 			}
+			
 		}else {
 			var t_str = string_digits(input_[i].Text);
 			ds_map_add(global.msg, input_[i].id_input, t_str);
@@ -38,11 +37,21 @@ if (instance_exists(textInput)){
 		
 	}
 	
-	fecha_ = string(dia) + "/" + string(mes) + "/" +string(anno) 
+	fecha_ = dia + "/" + mes + "/" + anno
 	
 	for (var i = 0; i < instance_number(Obj_menu_combobox); ++i ){
 		input_[i] = instance_find(Obj_menu_combobox,i);
-		ds_map_add(global.msg, input_[i].ID_, input_[i].text);	
+		if (input_[i].ID_ == "sexo"){
+			show_debug_message("estoy en sexo")
+			if (input_[i].text == "M"){
+				var sex = 1
+			}else if (input_[i].text == "F"){
+				var sex = 2
+			}
+			ds_map_add(global.msg, input_[i].ID_,sex);	
+		}else{
+			ds_map_add(global.msg, input_[i].ID_, input_[i].text);
+		}	
 	}
 	//ds_map_add(global.msg, "apellido", "bla");
 	ds_map_add(global.msg, "dv", "bla");
@@ -50,8 +59,8 @@ if (instance_exists(textInput)){
 	//ds_map_add(global.msg, "nacionalidad", "bla");
 	//ds_map_add(global.msg, "escolaridad", "bla");
 	//ds_map_add(global.msg, "salud", "bla");
-	show_debug_message(json_encode(global.msg))
 	ds_map_add(global.msg,"borndate" , fecha_);
+	show_debug_message(json_encode(global.msg))
 	
 	create_user_req = http_request(url, "POST", map, json_encode(global.msg));
 	

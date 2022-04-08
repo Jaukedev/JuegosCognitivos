@@ -1,3 +1,3 @@
-ds_list_add(miLista,"F","M")
+ds_list_add(miLista,"M","F")
 text = "Sexo"
 ID_ = "sexo"

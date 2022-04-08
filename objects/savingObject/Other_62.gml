@@ -1,23 +1,38 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+r_str = json_decode(ds_map_find_value(async_load, "result"));
+show_debug_message(string(ds_map_find_value(r_str, "response")))
+show_debug_message("response de result")
+
 if (create_user_req == ds_map_find_value(async_load, "id")){
+
+	show_debug_message(" estoy en asinc create user")
+	
 	if (ds_map_find_value(async_load, "status") == 0)   {
 		r_str = json_decode(ds_map_find_value(async_load, "result"));
+		show_debug_message(r_str)
 		if (r_str == -1){
 			show_debug_message("Error de guardado");
 		}
 		else{
-			show_debug_message("Usuario creado");
-			global.token = "123";
-			var url = "https://juegoscognitivos.cl/php/game-instances/data/load";
-			global.saveEventDataUrl = "https://juegoscognitivos.cl/php/game-instances/data/save";
-			var msg = ds_map_create();
-			ds_map_add(msg, "key", global.msg[? "rut"]);
-			var map = ds_map_create();
-			ds_map_add(map, "Content-Type", "application/json");
-			param_getter_id = http_request(url, "POST", map, json_encode(msg));
-			ds_map_destroy(map);
-			ds_map_destroy(msg);
+			if (string(ds_map_find_value(r_str, "response")) == "Existe una entrada con el mismo rut." ){
+				show_debug_message(string(ds_map_find_value(r_str, "response")))
+				show_debug_message("response de result")
+				scr_alert_add(11)
+			}else{
+				show_debug_message("Usuario creado");
+				global.token = "123";
+				var url = "https://juegoscognitivos.cl/php/game-instances/data/load";
+				global.saveEventDataUrl = "https://juegoscognitivos.cl/php/game-instances/data/save";
+				var msg = ds_map_create();
+				ds_map_add(msg, "key", global.msg[? "rut"]);
+				var map = ds_map_create();
+				ds_map_add(map, "Content-Type", "application/json");
+				param_getter_id = http_request(url, "POST", map, json_encode(msg));
+				ds_map_destroy(map);
+				ds_map_destroy(msg);
+			}
 		}
 
 	}
@@ -67,12 +82,9 @@ else if (event_saver_id == ds_map_find_value(async_load, "id")){
 
 else if (param_getter_id == ds_map_find_value(async_load, "id")) {
 	cargando = false;
-	show_debug_message(json_encode(async_load));
-	show_debug_message("el de arriba es el async_load")
+	show_debug_message("estoy en el param getter")
 	if (ds_map_find_value(async_load, "status") == 0)   {
 		r_str = json_decode(ds_map_find_value(async_load, "result"));
-		show_debug_message(json_decode(ds_map_find_value(async_load, "result")));
-		show_debug_message("el de arriba es el decode")
 		if (r_str == -1)
 			show_debug_message("Error de parametros");
 		else {

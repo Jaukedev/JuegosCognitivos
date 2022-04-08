@@ -12,4 +12,6 @@ function scr_alert_word(){
 	msg[8] = "Debe ingresar Fecha de Nacimiento"
 	msg[9] = "La fecha de nacimiento debe ser en formato DD/MM/AAAA"
 	msg[10] = "Debe Ingresar una contraseña"
+	msg[11] = "Rut ya registrado"
+	msg[12] = "Debe ingresar un email"
 }

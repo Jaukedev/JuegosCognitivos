@@ -71,6 +71,11 @@ if (room == rm_user_create and can_press == true){
 				//	scr_alert_add(9)
 				//}
 			}
+			if(input_[i].id_input == "email"){
+				if(input_[i].Text == ""){
+					scr_alert_add(12)
+				}
+			}
 
 		}
 		if(pass == pass2){

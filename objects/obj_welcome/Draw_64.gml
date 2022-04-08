@@ -39,8 +39,11 @@ if (room = rm_user_create) {
 	draw_text_ext_transformed(200,510, "Contrasena",10,1400,0.7,0.7,0)
 	draw_text_ext_transformed(200,570, "Repita",10,1400,0.7,0.7,0)
 	draw_text_ext_transformed(200,620, "Contrasena",10,1400,0.7,0.7,0)
-	draw_text_ext_transformed(200,700, "Fecha de",10,1400,0.6,0.6,0)
-	draw_text_ext_transformed(200,750, "Nacimiento",10,1400,0.6,0.6,0)
+	draw_text_ext_transformed(200,700, "Email",10,1400,0.6,0.6,0)
+	draw_text_ext_transformed(200,750, "Fecha de",10,1400,0.6,0.6,0)
+	draw_text_ext_transformed(200,800, "Nacimiento",10,1400,0.6,0.6,0)
+	
+
 }
 if (room = rm_games) {
 	/*draw_sprite(btn_memo,0,gui_width/2 - 373, gui_height/2 - 226)
