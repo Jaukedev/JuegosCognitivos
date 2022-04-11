@@ -14,4 +14,12 @@ function scr_alert_word(){
 	msg[10] = "Debe Ingresar una contraseña"
 	msg[11] = "Rut ya registrado"
 	msg[12] = "Debe ingresar un email"
+	msg[13] = "Debe seleccionar sexo"
+	msg[14] = "Debe seleccionar Nacionalidad"
+	msg[15] = "Debe seleccionar Educación"
+	msg[16] = "Debe seleccionar tipo de salud"
+	msg[17] = "Debe ingresar dia"
+	msg[18] = "Debe ingresar mes"
+	msg[19] = "Debe ingresar ano"
+	msg[20] = "Debe ingresar apellido"
 }

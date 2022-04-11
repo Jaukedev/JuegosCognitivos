@@ -29,59 +29,14 @@ if (room == rm_user_create and can_press == true){
 	}
 	if(keyboard_check_pressed(vk_f9)) {
 		audio_play_sound(button,1,false)
+		 
 		var pass = 0;
 		var pass2 = 0;
-		for (var i = 0; i < instance_number(textInput); ++i)
-		{
-			input_[i] = instance_find(textInput,i);
-			if(input_[i].id_input == "clave"){
-				pass = input_[i].Text;
-				if(input_[i].Text == ""){
-					scr_alert_add(3)
-				}
-			}
-			if(input_[i].id_input == "clave2"){
-				pass2 = input_[i].Text;
-				if(input_[i].Text == ""){
-					scr_alert_add(4)
-				}
-			}
-			if(input_[i].id_input == "nombre"){
-				if(input_[i].Text == ""){
-					scr_alert_add(0)
-				}
-			}
-			if(input_[i].id_input == "rut"){
-				if(input_[i].Text == ""){
-					scr_alert_add(1)
-				}else{
-					try{
-						var rut_int = int64(input_[i].Text)
-					}catch(e){
-						scr_alert_add(2)
-						show_debug_message(e)
-					//show_debug_message(rut_int)
-					}
-				}
-			}
-			if(input_[i].id_input == "dia" or input_[i].id_input == "mes" or input_[i].id_input == "año"){
-				if(input_[i].Text == ""){
-					scr_alert_add(8)
-				}//else if (!check_fecha_de_nacimiento(input_[i].Text)){
-				//	scr_alert_add(9)
-				//}
-			}
-			if(input_[i].id_input == "email"){
-				if(input_[i].Text == ""){
-					scr_alert_add(12)
-				}
-			}
-
-		}
+		
 		if(pass == pass2){
 			if (variable_global_exists("savingObjectInstance")) {
 				with (global.savingObjectInstance) {
-					event_user(0);
+						event_user(0);
 				}
 			}
 		}else {

@@ -5,7 +5,7 @@
  if (global.active_input == id_input){
 	 
 	 
-	 if(keyboard_check(vk_anykey) and string_length(Text)<20){
+	 if(keyboard_check(vk_anykey) and string_length(Text)<limit){
 		Text = Text + string(keyboard_string);
 		keyboard_string = "";
 	 }
@@ -21,6 +21,7 @@
 		delete_timer = -4;
 	 }
 
+	keyboard_string = "";
 	keyboard_virtual_show(kbv_type_default, kbv_returnkey_default, kbv_autocapitalize_none, false);
 
 	} else {

@@ -34,6 +34,6 @@ if (lvl_complete == 1){
 	
 	draw_sprite(botones,0, 372,798)
 	draw_sprite(botones,1, 832,798)
-	if global.level < 3 draw_sprite(botones,2, 1215,798)
+	//if global.level < 3 draw_sprite(botones,2, 1215,798)
 }
 
