@@ -21,6 +21,7 @@
     {"id":{"name":"fntInput3","path":"fonts/fntInput3/fntInput3.yy",},"order":6,},
     {"id":{"name":"spr_items","path":"sprites/spr_items/spr_items.yy",},"order":34,},
     {"id":{"name":"time_sprite","path":"sprites/time_sprite/time_sprite.yy",},"order":12,},
+    {"id":{"name":"Spr_combobox_extended","path":"sprites/Spr_combobox_extended/Spr_combobox_extended.yy",},"order":36,},
     {"id":{"name":"obj_saving_local","path":"objects/obj_saving_local/obj_saving_local.yy",},"order":11,},
     {"id":{"name":"textInput","path":"objects/textInput/textInput.yy",},"order":17,},
     {"id":{"name":"btn_create","path":"sprites/btn_create/btn_create.yy",},"order":32,},

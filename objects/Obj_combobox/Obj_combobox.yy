@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "Spr_combobox",
-    "path": "sprites/Spr_combobox/Spr_combobox.yy",
+    "name": "Spr_combobox_extended",
+    "path": "sprites/Spr_combobox_extended/Spr_combobox_extended.yy",
   },
   "solid": false,
   "visible": true,

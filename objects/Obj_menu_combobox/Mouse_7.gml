@@ -11,7 +11,7 @@ if (position_meeting(mouse_x,mouse_y,self)){
 		show_debug_message("asd")
 		for (var i = 0; i < ds_list_size(miLista); i++){
 			show_debug_message(i)
-			var item = instance_create_depth(x, yy,1,Obj_combobox)
+			var item = instance_create_depth(x, yy,-1,Obj_combobox)
 			show_debug_message(i)
 			item.text = ds_list_find_value(miLista,i);
 			item.ID_ = ID_
