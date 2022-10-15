@@ -8,7 +8,7 @@
 
 if global.level = 1 number = 6
 if global.level = 2 number = 9
-if global.level = 3 number = sprite_get_number(spr_circle);
+if global.level = 3 number = 15
 
 var number_of_tiles = number;
 var tiles;

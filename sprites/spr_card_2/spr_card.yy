@@ -108,7 +108,7 @@
     "eventStubScript": null,
     "parent": {"name":"spr_card","path":"sprites/spr_card/spr_card.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_card",
+    "name": "",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -72,6 +72,7 @@
     {"id":{"name":"fntHUD","path":"fonts/fntHUD/fntHUD.yy",},"order":4,},
     {"id":{"name":"Script11","path":"scripts/Script11/Script11.yy",},"order":3,},
     {"id":{"name":"objInputBox","path":"objects/objInputBox/objInputBox.yy",},"order":13,},
+    {"id":{"name":"spr_card_2","path":"sprites/spr_card_2/spr_card_2.yy",},"order":37,},
     {"id":{"name":"fuente_gui2","path":"fonts/fuente_gui2/fuente_gui2.yy",},"order":1,},
     {"id":{"name":"obj_welcome","path":"objects/obj_welcome/obj_welcome.yy",},"order":2,},
     {"id":{"name":"inputbox_get_width","path":"scripts/inputbox_get_width/inputbox_get_width.yy",},"order":3,},
